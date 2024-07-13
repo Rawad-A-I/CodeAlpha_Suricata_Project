@@ -1,0 +1,8 @@
+#Here add your Custom Rules, For Example for Nmap:
+
+alert tcp any any -> any any (flags:S; msg:"Nmap SYN Scan Detected"; sid:100011; rev:1;)
+alert tcp any any -> any any (flags:F; msg:"Nmap FIN Scan Detected"; sid:100012; rev:1;)
+alert tcp any any -> any any (flags:FPU; msg:"Nmap Xmas Scan Detected"; sid:100013; rev:1;)
+alert tcp any any -> any any (flags:0; msg:"Nmap Null Scan Detected"; sid:100014; rev:1;)
+alert tcp any any -> any any (content:"|04 00 28 00 00 00 00 00|"; msg:"Nmap Version Detection Detected"; sid:100015; rev:1;)
+
